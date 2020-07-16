@@ -33,6 +33,28 @@ class Solution:
 
         return True
 
+    # solution using in-place search twice
+    def canConstruct_inPlaceSearch(self, ransomNote: str, magazine: str) -> bool:
+        for i in ransomNote:
+            if (i not in magazine):
+                return False
+
+            magazine = magazine.replace(i, '', 1)
+
+        return True
+
+    # solution using in-place search once
+    def canConstruct_inPlaceSearch2(self, ransomNote: str, magazine: str) -> bool:
+        for i in ransomNote:
+            j = magazine.find(i)
+            if (j < 0):
+                return False
+
+            # strings are immutable; create new string using slice & concatenation
+            magazine = magazine[:j] + magazine[(j + 1):]
+
+        return True
+
     # solution using dictionary
     def canConstruct_dict(self, ransomNote: str, magazine: str) -> bool:
         alphabet = defaultdict(int)
