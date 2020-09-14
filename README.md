@@ -1,5 +1,5 @@
 # programming-challenges
-Collection of some solutions to programming challenges I have written in languages such as Java, Python.
+Collection of solutions to programming challenges I have written in languages such as Java, Python.
 - add-strings (Java): Given two non-negative integers num1 and num2 represented as string, return the sum of num1 and num2.
 - binary-consecutive-ones (Java): Return true if binary representation of integer contains consecutives 1s, else return false.
 - counting-cycle (Java): Each element of an int array points to the another element, eventually creating a cycle. Starting at array[0], find the length of the cycle.
